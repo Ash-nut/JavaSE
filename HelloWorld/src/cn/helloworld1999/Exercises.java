@@ -36,7 +36,7 @@ import java.util.Scanner;
 
 public class Exercises {
 	public static void main(String[] args) {	
-		Exercises.exercise10();
+		Exercises.exercise12();
 	}
 	static public void exercise1() {
 		Scanner sc = new Scanner(System.in);
@@ -112,17 +112,19 @@ public class Exercises {
 		System.out.println(temp < 1000?"输入不合法":(temp == (so * so * so) + (hu*hu*hu) + (th*th*th) + (ge*ge*ge))?"yes":"no");
 	}
 	
+	/**
+	 * 这道题写的麻烦，上课教的更好，毕竟是用了 || 和 && ，确实这样更简单
+	 */
 	static public void exercise10() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("输入1-3整数(1 == 石头， 2 == 剪刀， 3 == 布。)：");
+		System.out.println("输入1-3整数(1 == 石头， 2 == 剪刀， 3 == 布)：");
 		int temp = sc.nextInt();
-		int ran = (int)(Math.random() * 10 / 3 + 1);
+		int ran = (int)(Math.random() * 3 + 1);
 		System.out.println(ran);
 		// 使 1 == 石头， 2 == 剪刀， 3 == 布。
 		System.out.println("系统输出：" + (ran == 1?"石头":ran == 2?"剪刀":"布"));
 		System.out.println("你输出：" + (temp == 1?"石头":temp == 2?"剪刀":"布"));
-		int key = temp * ran;
-		switch(key) {
+		switch(temp * ran) {
 			case 2:
 				System.out.println("winer:" + (ran == 1?"玩家":"系统"));
 				break;
@@ -134,6 +136,22 @@ public class Exercises {
 				break;
 			default:
 				System.out.println("平局");
+		}
+	}
+	static public void exercise11() {
+		int sum = 0;
+		for(int i = 1;i < 100;i +=2) {
+			sum += i;
+		}
+		System.out.println("sum = " + sum);
+	}
+	static public void exercise12() {
+		int i= 0;
+			for(;i<100;i++) {
+				System.out.print(i%3 == 0?i:" ");
+				if(i%3 == 0) {
+					System.out.println();
+				}
 		}
 	}
 }

@@ -8,7 +8,8 @@ public class Test {
 //		Test.min();
 //		Test.max();
 //		Test.getNumMax();
-		Test.getSeason();
+		//Test.getSeason();
+		Test.getScoreGrade();
 	}
 	public static void min() {
 		System.out.println("min = " + (a > b? b:a));
@@ -45,4 +46,28 @@ public class Test {
 								:(mon==9||mon==10||mon==11)?"冬":"input inlegal";
 		System.out.println(mon + " 月是 " + season + " 季");
 	}
+	public static void getScoreGrade() {
+		char A = 'A';
+		char ran = (char)(Math.random() * 5 + (int)A);
+		switch (ran) {
+		case 'A':
+			System.out.println("A:100-90");
+			break;
+		case 'B':
+			System.out.println("B:89-80");
+			break;
+		case 'C':
+			System.out.println("C:79-70");
+			break;
+		case 'D':
+			System.out.println("D:69-60");
+			break;
+		case 'E':
+			System.out.println("E:59-0");
+			break;
+		default:
+			break;
+		}
+	}
+	
 }
