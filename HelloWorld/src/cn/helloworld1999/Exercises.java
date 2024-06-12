@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Exercises {
 	public static void main(String[] args) {	
-		Exercises.exercise1();
+		Exercises.exercise4();
 	}
 	static public void exercise1() {
 		Scanner sc = new Scanner(System.in);
@@ -40,14 +40,22 @@ public class Exercises {
 	//没意思，不做了
 	static public void exercise6() {
 	}
+	
+	/**
+	 * 题目有问题吧
+	 */
 	static public void exercise7() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("输入工资，求税：");
-		double temp = sc.nextDouble();
+		double taxBase = sc.nextDouble();
+		double taxBaracketZero = taxBase - 2500;
+		double taxBaracketOne = (taxBase - 5000)*0.03;
+		double taxBaracketTwo = (taxBase - 8000)*0.05;
+		double taxBaracketThree = (taxBase - 20000)*0.1;
+		double taxBaracketFour = (taxBase - 20000)*0.1;
 		
 		
-		System.out.println(temp%2==1?"no":"yes");
+		System.out.println(taxBase%2==1?"no":"yes");
 	}
-	
 	
 }
