@@ -8,7 +8,6 @@ package cn.helloworld1999;
 public class HomeWork {
 	static int i = 10,j = 3;
 	public static void main(String[] args) {
-		//启动
 		HomeWork.solution();
 		HomeWork.solution1();
 		HomeWork.solution2();
