@@ -146,12 +146,5 @@ public class Exercises {
 		System.out.println("sum = " + sum);
 	}
 	static public void exercise12() {
-		int i= 0;
-			for(;i<100;i++) {
-				System.out.print(i%3 == 0?i:" ");
-				if(i%3 == 0) {
-					System.out.println();
-				}
-		}
 	}
 }
