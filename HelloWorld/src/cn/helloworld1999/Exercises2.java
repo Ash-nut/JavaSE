@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Exercises2 {
     public static void main(String[] args) {
-    	exercise2();
+        exercise2();
     }
 
     public static void exercise1() {
@@ -14,7 +14,6 @@ public class Exercises2 {
         for (int i = temp - 1; i >= 1; i--) {
             if ((temp % i == 0) && (i != 1)) {
                 System.out.println(temp + "不是一个质数");
-                // System.out.println("当前i==" + i);
                 return;
             }
         }
@@ -25,7 +24,8 @@ public class Exercises2 {
         // 从100倒数
         for (int loop = 1; loop <= 100; loop++) {
             // 判断每一个数字是否是质数
-            for (int i = loop ; i >= 0; i--) {
+            boolean flag = false;
+            for (int i = loop; i >= 0; i--) {
                 if ((loop % i == 0) && (i != 1)) {
                     System.out.println(i + "不是质数");
                     break;
