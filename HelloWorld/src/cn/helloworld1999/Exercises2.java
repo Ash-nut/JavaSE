@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class Exercises2 {
     public static void main(String[] args) {
         // exercise1();
-        exercise2();
-
+        exercise3();
     }
 
     public static boolean exercise1(int temp) {
@@ -29,5 +28,14 @@ public class Exercises2 {
                 continue;
             }
         }
+    }
+
+    // 震惊！，static可以不用管权限的？？？
+    static void exercise3() {
+        int[] arr = { 1, 2, 2, 2, 2, 2, 2 };
+        for (int i : arr) {
+            System.out.println(i);
+        }
+        System.out.println(arr.length);
     }
 }
