@@ -35,8 +35,8 @@ public class HomeWork2day {
 
     public static void login() {
         System.out.println("分别输入账户名及密码");
-        for (byte i = 3; i > 0; i--) {
-            if (!getKeyBoardAccount() || !getKeyBoardPin()) {
+        for (byte i = 3; i >= 0; i--) {
+            if (!getKeyBoardAccount() | !getKeyBoardPin()) {
                 System.out.println("账号或密码错误，还有 " + i + " 次机会");
             } else {
                 landingStatus = true;
