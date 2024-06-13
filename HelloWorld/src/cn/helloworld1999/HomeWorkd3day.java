@@ -45,6 +45,6 @@ public class HomeWorkd3day {
 
     // 展示球
     static void showBalls(int[] balls) {
-        System.out.println(Arrays.toString(balls));
+        System.out.println(Arrays.toString(balls)); // 书上看的，以字符串形式打印数组
     }
 }
