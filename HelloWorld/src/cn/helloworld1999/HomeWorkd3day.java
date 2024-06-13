@@ -1,5 +1,7 @@
 package cn.helloworld1999;
 
+import java.util.Arrays;
+
 /**
  * @author XinruiYi
  * @version 0.0.1
@@ -43,8 +45,6 @@ public class HomeWorkd3day {
 
     // 展示球
     static void showBalls(int[] balls) {
-        for (int ball : balls) {
-            System.err.print(ball + " ");
-        }
+        System.out.println(Arrays.toString(balls));
     }
 }
