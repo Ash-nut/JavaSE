@@ -1,6 +1,7 @@
 package cn.helloworld1999;
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 /**
  * 没写完
@@ -91,7 +92,6 @@ public class Exercises4 {
     }
 
     /**
-     * 这是一个有问题的方法，应该重写，原因是确实是跳过了想删的那个元素，但是 短的数组在那里也没有进行操作；我认为这个还是值得思考的，有办法实现的
      * 删除
      * 删除学生，输入待处理名单，目标索引，输出名单
      * 
@@ -100,13 +100,8 @@ public class Exercises4 {
      * @return
      */
     static String[] dropStu(String[] stus, int index) {
-        // String[] tempStus = new String[stus.length ]; // 我要新的比旧的短
-        // for (int i = 0; i < tempStus.length+1; i++) { // 接下来，我会把长的给短的，但是我会略过我要扔的那一个
-        // if (i == index) continue;
-        // tempStus[i] = stus[index];
-        // index++;
-        // }
-        // stus = tempStus;
+        stus[index] = stus[stus.length - 1];
+        stus = Arrays.copyOf(stus, stus.length - 1);
         return stus;
     }
 
