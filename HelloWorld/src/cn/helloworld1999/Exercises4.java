@@ -129,7 +129,7 @@ public class Exercises4 {
         System.out.println("1.查询所有学生信息");
         System.out.println("2.添加一条学生信息");
         System.out.println("3.修改指定学生的年龄");
-        System.out.println("4.删除指定学员的信息"); // 这是个有问题的方法，要重写的
+        System.out.println("4.删除指定学员的信息");
         System.out.println("5.根据标号查询指定学生信息");
         System.out.println("6.找出年龄在20-25之间所有姓杨的学生");
         System.out.println("7.三个字且带有'铁'关键字的学生");
