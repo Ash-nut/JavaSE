@@ -43,6 +43,14 @@ public class CarManage {
         }
     }
 
+    // 尝试一下正则表达式
+    static public boolean inputValidityCheck(String temp) {
+        boolean flag = false;
+        String regx = "[京津冀晋内辽吉黑沪苏浙皖闽赣鲁豫鄂湘粤桂琼渝川黔滇藏陕甘青宁新港澳台][A-Z][0-9]{5}";
+        flag = temp.matches(regx);
+        return flag;
+    }
+
     /**
      * 在现有Car[]里查找是否存在输入的车牌号的实例，存在则返回在Car[]中的位置，不存在则返回 -1
      * 
@@ -54,6 +62,10 @@ public class CarManage {
         Scanner sc = new Scanner(System.in);
         System.out.println("输入待查找的车牌号码：");
         String str = sc.next();
+        if (!inputValidityCheck(str)) {
+            System.out.println("输入车牌格式错误");
+            return -1;
+        }
         for (int i = 0; i <= tempCars.length - 1; i++) {
             if (str.equals(tempCars[i].licensePlateNumber)) {
                 System.out.println("车牌信息：" + tempCars[i].licensePlateNumber + " 车辆类型：" + tempCars[i].vehicleType
@@ -73,6 +85,10 @@ public class CarManage {
      * @return 返回的是 int类型
      */
     static public int selectCar(Car[] tempCars, String str) {
+        if (!inputValidityCheck(str)) {
+            System.out.println("输入车牌格式错误");
+            return -1;
+        }
         int flag = -1;
         for (int i = 0; i <= tempCars.length - 1; i++) {
             if (str.equals(tempCars[i].licensePlateNumber)) {
