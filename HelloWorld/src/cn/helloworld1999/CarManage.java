@@ -15,17 +15,9 @@ public class CarManage {
 
     public static void main(String[] args) {
         newCars = CarManage.initCars();
-        showCars(newCars);
-        // menu(); // OK 的
-        // findCar(newCars); // ok 的
-        // creatNewCar(newCars);// OK 的
-        // updataCarData(newCars);//OK
-        // dropCar(newCars);//OK
-        // showSiChuanNumAndSaloonCars(newCars); OK
-        // showBMW400kCars(newCars); OK
-        // BubbleSort(newCars); //OK
-        Car.showTypeAndNum(newCars); // 这个搞不赢了，数组越界 要请教一下杨哥
-        showCars(newCars);
+        while (true) {
+            menu();
+        }
     }
 
     /**
@@ -102,7 +94,7 @@ public class CarManage {
         temp[temp.length - 1] = new Car(null, null, null, 0, null);
         System.out.println("新增车辆的车牌 |号码| 为：");
         String tempNum = sc.next();
-        if (selectCar(tempCars, tempNum) != -1) {
+        if (selectCar(tempCars, tempNum) == -1) {
             temp[temp.length - 1].licensePlateNumber = tempNum;
             System.out.println("新增车辆的车辆 |类型| 为：");
             temp[temp.length - 1].vehicleType = sc.next();
@@ -129,18 +121,31 @@ public class CarManage {
         System.out.println("待修改信息的车辆车牌 |号码| 为：");
         String tempNum = sc.next();
         int index = selectCar(temp, tempNum);
+        System.out.println("----------------------------");
+        System.out.println("1.修改车辆类型");
+        System.out.println("2.修改车辆颜色");
+        System.out.println("3.修改车辆价格");
+        System.out.println("4.修改车辆品牌");
+        System.out.println("----------------------------");
         if (index != -1) {
-            temp[index].licensePlateNumber = tempNum;
-            System.out.println("待修改信息的车辆 |类型| 为：");
-            temp[index].vehicleType = sc.next();
-            System.out.println("待修改信息的车辆 |颜色| 为：");
-            temp[index].color = sc.next();
-            System.out.println("待修改信息的车辆 |价格| 为：");
-            temp[index].price = sc.nextInt();
-            System.out.println("待修改信息的车辆 |品牌| 为：");
-            temp[index].brand = sc.next();
-            CarManage.newCars = temp;
-            System.out.println("修改成功");
+            byte key = sc.nextByte();
+            switch (key) {
+                case 1:
+                    temp[index].setVehicleType();
+                    break;
+                case 2:
+                    temp[index].setColor();
+                    break;
+                case 3:
+                    temp[index].setPrice();
+                    break;
+                case 4:
+                    temp[index].setBrand();
+                    break;
+                default:
+                    System.out.println("非法输入");
+                    break;
+            }
         } else {
             System.out.println("车牌号输入有误");
         }
@@ -186,7 +191,7 @@ public class CarManage {
         }
     }
 
-    static public void BubbleSort(Car[] tempCars) {
+    static public void bubbleSort(Car[] tempCars) {
         for (int i = 0; i < tempCars.length - 1; i++) {
             for (int j = 0; j < tempCars.length - 1 - i; j++) {
                 Car temp = null;
@@ -200,6 +205,7 @@ public class CarManage {
     }
 
     static public void menu() {
+        System.out.println("--------------------------------------------------");
         System.out.println("1、查询所有汽车信息\n" + //
                 "\n" + //
                 "2、添加一条车辆信息\n" + //
@@ -217,13 +223,37 @@ public class CarManage {
                 "8、根据车辆价格对所有车辆进行升序排序\n" + //
                 "\n" + //
                 "9、统计不同类型的车辆总数");
+        System.out.println("--------------------------------------------------");
         Scanner sc = new Scanner(System.in);
         byte key = sc.nextByte();
         switch (key) {
             case 1:
                 showCars(newCars);
                 break;
-
+            case 2:
+                creatNewCar(newCars);
+                break;
+            case 3:
+                updataCarData(newCars);
+                break;
+            case 4:
+                dropCar(newCars);
+                break;
+            case 5:
+                findCar(newCars);
+                break;
+            case 6:
+                showSiChuanNumAndSaloonCars(newCars);
+                break;
+            case 7:
+                showBMW400kCars(newCars);
+                break;
+            case 8:
+                bubbleSort(newCars);
+                break;
+            case 9:
+                Car.showTypeAndNum(newCars);
+                break;
             default:
                 System.out.println("非法输入");
                 break;
@@ -252,22 +282,67 @@ class Car {
         this.brand = brand;
     }
 
+    public void setVehicleType() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("车辆类型修改为：");
+        vehicleType = sc.next();
+    }
+
+    public void setColor() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("车辆颜色修改为：");
+        color = sc.next();
+    }
+
+    public void setPrice() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("车辆价格修改为：");
+        price = sc.nextInt();
+    }
+
+    public void setBrand() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("车辆价格修改为：");
+        brand = sc.next();
+    }
+
     /**
-     * 没搞定的问题
+     * 我预期的效果是可以生成一个局部变量的 String[], 数组内容为：{车辆类型1，车辆类型1的数量，车辆类型2，车辆类型2的数量，……}
      * 
      * @param tempCars
      */
     static public void showTypeAndNum(Car[] tempCars) {
-        String[][] typeAndNum = new String[0][0];
-        for (int i = 0; tempCars.length > i; i++) {
-            if (tempCars[i].equals(typeAndNum[i][1])) {
-                typeAndNum[i][1] += 1;
+        String[] carTypes = new String[0];
+        for (int i = 0; i <= tempCars.length - 1; i++) {
+            boolean flag = false;
+            int index = -1;
+            // 这个 j 的游标我让它指向奇数位，也就是我设定的存放类型的地方；也就是说这个循环我用它来【遍历现有的车辆类型】的表。
+            System.out.println("测试：1.这里说明对车辆类型进行了遍历");
+            for (int j = 0; j <= carTypes.length - 1; j += 2) {
+                System.out.println("测试：2.这里说明进行了对现有【统计】类型比对" + j);
+                if (tempCars[i].vehicleType.equals(carTypes[j])) {
+                    index = j;
+                    flag = true;
+                }
+            }
+            if (flag && index != -1) {
+                // 如果他们这次相等，那么我就要让 carTypes[j+1] 的地方 +1，也就是给这种类型的数量+1
+                System.out.println("测试：3.这里说明进行了对目标类型进行了+1");
+                // 这里我需要先把 carTypes[j+1] 先转换成 int,以便进行 +1；再转回 String 存入
+                int temp = Integer.parseInt(carTypes[index + 1]) + 1;
+                carTypes[index + 1] = Integer.toString(temp);
             } else {
-                typeAndNum = Arrays.copyOf(typeAndNum, typeAndNum.length);
-                typeAndNum[typeAndNum.length][0] = tempCars[i].vehicleType;
-                typeAndNum[typeAndNum.length][1] += 1;
+                System.out.println("测试：4.这里说明进行了扩列");
+                // 这说明没有查到这种类型，那我要给 carType[] 进行扩列，加两位。
+                carTypes = Arrays.copyOf(carTypes, carTypes.length + 2);// 扩列
+                carTypes[carTypes.length - 2] = tempCars[i].vehicleType; // 添加新的车辆类型
+                // 这里我直接给一个 String 的 "1" 是因为这种情况根本不用进行计算；因为这里代表着这个车辆类型第一次出现
+                carTypes[carTypes.length - 1] = "1";
+            }
+            System.out.println("车辆类型" + "  " + "车辆数量");
+            for (int x = 0; x <= carTypes.length - 1; x += 2) {
+                System.out.println(carTypes[x] + "  " + carTypes[x + 1]);
             }
         }
-        System.out.println(typeAndNum.toString());
     }
 }
