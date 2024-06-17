@@ -6,7 +6,7 @@ public class TestMethod {
     public static void main(String[] args) {
         // int[] i = {0,1,2,3,4,5,6,7,8,9};
         // System.out.println(Arrays.toString(method4_1(i, 1, 10)));
-        method7(7);
+        method7(1);
     }
 
     public static int method1(int[] temp){
@@ -88,15 +88,19 @@ public class TestMethod {
         }
         return index;
     }
-    public static void method7(int temp){
+    public static boolean method7(int temp){
         for(int i =1;i<=temp;i++)
         {
+            if (temp==1) {
+                System.out.println("1 不是质数");
+                return false;
+            }
             if (temp%i==0&&i!=1&&i!=temp) {
                 System.out.println( temp + " 不是质数");
-                return;
+                return false;
             }
         }
         System.out.println(temp + " 是质数");
-        return;
+        return true; 
     }
 }
