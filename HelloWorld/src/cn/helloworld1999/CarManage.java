@@ -333,9 +333,7 @@ class Car {
             boolean flag = false;
             int index = -1;
             // 这个 j 的游标我让它指向奇数位，也就是我设定的存放类型的地方；也就是说这个循环我用它来【遍历现有的车辆类型】的表。
-            System.out.println("测试：1.这里说明对车辆类型进行了遍历");
             for (int j = 0; j <= carTypes.length - 1; j += 2) {
-                System.out.println("测试：2.这里说明进行了对现有【统计】类型比对" + j);
                 if (tempCars[i].vehicleType.equals(carTypes[j])) {
                     index = j;
                     flag = true;
@@ -343,12 +341,10 @@ class Car {
             }
             if (flag && index != -1) {
                 // 如果他们这次相等，那么我就要让 carTypes[j+1] 的地方 +1，也就是给这种类型的数量+1
-                System.out.println("测试：3.这里说明进行了对目标类型进行了+1");
                 // 这里我需要先把 carTypes[j+1] 先转换成 int,以便进行 +1；再转回 String 存入
                 int temp = Integer.parseInt(carTypes[index + 1]) + 1;
                 carTypes[index + 1] = Integer.toString(temp);
             } else {
-                System.out.println("测试：4.这里说明进行了扩列");
                 // 这说明没有查到这种类型，那我要给 carType[] 进行扩列，加两位。
                 carTypes = Arrays.copyOf(carTypes, carTypes.length + 2);// 扩列
                 carTypes[carTypes.length - 2] = tempCars[i].vehicleType; // 添加新的车辆类型
