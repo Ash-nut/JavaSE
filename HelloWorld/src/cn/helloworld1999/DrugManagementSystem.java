@@ -4,7 +4,7 @@ import java.util.Arrays;
 /**
  * @author XinruiYi
  * @author yixinrui@helloworld1999.cn
- * @version 1.0.0
+ * @version 1.1.0
  */
 public class DrugManagementSystem {
     static public String[] strDrugsInformaction = new String[]{
@@ -253,7 +253,7 @@ public class DrugManagementSystem {
         for(j = 0;j<drugs.length;j++){
             boolean flag = false;
             //逐个比对类型表，检查是否存在该类型，我给它i是为了把i传出去
-            for(;i<placeOfOriginTypesArray.length;i++){
+            for(i = 0;i<placeOfOriginTypesArray.length;i++){
                 if (drugs[j].placeOfOrigin.equals(placeOfOriginTypesArray[i])) {
                     placeOfOriginNumArray[i]+=1;
                     flag = true;
@@ -263,11 +263,13 @@ public class DrugManagementSystem {
             if (!flag) {
                 placeOfOriginNumArray = Arrays.copyOf(placeOfOriginNumArray, placeOfOriginNumArray.length+1);
                 placeOfOriginTypesArray = Arrays.copyOf(placeOfOriginTypesArray, placeOfOriginTypesArray.length+1);
+
                 placeOfOriginTypesArray[placeOfOriginTypesArray.length-1] = drugs[j].placeOfOrigin;
                 placeOfOriginNumArray[placeOfOriginNumArray.length-1] = 1;
             }
         }
         for(int l =0;l<placeOfOriginTypesArray.length;l++){
+            System.out.println(Arrays.toString(placeOfOriginTypesArray));
             System.out.println("生产地在："+placeOfOriginTypesArray[l]+" 的的药品总共有： "+placeOfOriginNumArray[l]+" 种,详情如下：");
             System.out.println("药品编号 | 药品名称 | 产地 | 进价 | 单价 | 库存");
             for(Drug ii:drugs){

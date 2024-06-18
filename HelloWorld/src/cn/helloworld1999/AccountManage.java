@@ -291,7 +291,7 @@ public class AccountManage {
         for(j = 0;j<accounts.length;j++){
             boolean flag = false;
             //逐个比对类型表，检查是否存在该类型，我给它i是为了把i传出去
-            for(;i<prefessionTypesArray.length;i++){
+            for(i=0;i<prefessionTypesArray.length;i++){
                 if (accounts[j].profession.equals(prefessionTypesArray[i])) {
                     prefessionNumArray[i]+=1;
                     flag = true;
