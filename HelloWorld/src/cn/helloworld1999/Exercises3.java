@@ -64,4 +64,4 @@ public class Exercises3 {
     static void exercise5(){
         String name[] = new String[] { "倩倩", "刘亦菲", "zsl", "lucy" };
     }
-} \
+}

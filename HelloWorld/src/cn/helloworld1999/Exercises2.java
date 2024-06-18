@@ -1,6 +1,6 @@
 package cn.helloworld1999;
 
-import Ju
+
 import java.util.Scanner;
 
 public class Exercises2 {

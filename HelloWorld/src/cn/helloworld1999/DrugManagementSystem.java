@@ -214,7 +214,7 @@ public class DrugManagementSystem {
         System.out.println("药品编号 | 药品名称 | 产地 | 进价 | 单价 | 库存");
         double purcasingPriceMax = 0;
         for(int i = 0;i<drugs.length;i++){
-            purcasingPriceMax = purcasingPriceMax>=drugs[i].unitPrice?purcasingPriceMax:drugs[i].unitPrice;
+            purcasingPriceMax = Math.max(purcasingPriceMax, drugs[i].unitPrice);
         }
         for(Drug i : drugs){
             if (purcasingPriceMax==i.unitPrice) {
