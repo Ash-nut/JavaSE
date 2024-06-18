@@ -76,7 +76,8 @@ public class AccountManage {
     static public Account[] initAccountArray(String[] strArray){
         Account[] accounts = new Account[strArray.length];
         for(int i = 0;i<strArray.length;i++){
-            accounts[i] = new Account(strArray[i].replaceAll(" ","").split("-")[0], 
+            accounts[i] = new Account(
+            strArray[i].replaceAll(" ","").split("-")[0], 
             strArray[i].replaceAll(" ","").split("-")[1], 
             strArray[i].replaceAll(" ","").split("-")[2], 
             strArray[i].replaceAll(" ","").split("-")[3], 
@@ -260,7 +261,7 @@ public class AccountManage {
         System.out.println("账号ID | 用户名 | 性别 | 联系电话 | 余额 | 职业");
         double indexBalance = 0;
         for(int i = 0;i<accounts.length-1;i++){
-            indexBalance = accounts[i].balance>=accounts[i+1].balance?accounts[i].balance:accounts[i+1].balance;
+            indexBalance = accounts[i].balance>=indexBalance?accounts[i].balance:indexBalance;
         }
         for(Account i :accounts){
             if (indexBalance==i.balance) {
