@@ -7,7 +7,7 @@ import java.util.Arrays;
  * @version 1.1.0
  */
 public class DrugManagementSystem {
-    static public String[] strDrugsInformaction = new String[]{
+    static String[] strDrugsInformaction = new String[]{
         "230714204045 - 盖中盖 - 南京 - 18 - 88 - 998",
         "230714204110 - 新盖中盖 - 南京 - 28 - 188 - 1000",
         "230714204101 - 巨能钙 - 上海 - 26 - 200 - 1200",
