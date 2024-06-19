@@ -71,4 +71,17 @@ public class Teacher {
 		this.sal = sal;
 		this.isDel = isDel;
 	}
+
+	@Override
+	public String toString() {
+		return "Teacher{" +
+				"tid='" + tid + '\'' +
+				", tname='" + tname + '\'' +
+				", seniority='" + seniority + '\'' +
+				", birthday='" + birthday + '\'' +
+				", address='" + address + '\'' +
+				", sal=" + sal +
+				", isDel=" + isDel +
+				'}';
+	}
 }
