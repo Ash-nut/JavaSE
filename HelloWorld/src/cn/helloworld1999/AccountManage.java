@@ -67,6 +67,7 @@ public class AccountManage {
                 System.out.println("非法输入");
                 break;
         }
+        sc.close();
     }
     /**
      * 初始化对象数组
@@ -152,6 +153,7 @@ public class AccountManage {
      */
     static public void retrieveAccount(Account[] accounts){
         System.out.println("输入待查找的目标ID:");
+        @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
         String strAccountID = sc.next();
         int i = cheakInputAccoutNumAndReturnIndex(strAccountID, accounts);
@@ -166,6 +168,7 @@ public class AccountManage {
     }
     static public Account[] updataAccount(Account[] accounts){
         System.out.println("输入待查找的目标ID:");
+        @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
         String strAccountID = sc.next();
         int i = cheakInputAccoutNumAndReturnIndex(strAccountID, accounts);

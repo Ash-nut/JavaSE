@@ -86,7 +86,14 @@ public class Teacher implements Comparable<Teacher>  {
 	}
 	@Override
 	public int compareTo(Teacher o) {
-		// TODO Auto-generated method stub
 		return o.getSal() - this.getSal();
+	}
+	public void showSomething(int i){
+		System.out.println(i);
+		return;
+	}
+	public void showSomething(String str){
+		System.out.println(str);
+		return;
 	}
 }
