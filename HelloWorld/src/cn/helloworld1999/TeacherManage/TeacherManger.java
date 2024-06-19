@@ -1,6 +1,5 @@
 package cn.helloworld1999.TeacherManage;
 
-import javax.xml.crypto.Data;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Scanner;
@@ -222,7 +221,6 @@ public class TeacherManger {
 		}
 		for(int i=0;i<teacherArray.length;i++){
 			for(int j = 0;j<teacherArray.length-1-i;j++){
-				Teacher temp = teacherArray[i];
 				if (teacherArray[i].getSal()<teacherArray[i+1].getSal()) {
 					teacherArray[i] = teacherArray[i+1];
 				}
@@ -239,8 +237,7 @@ public class TeacherManger {
 		}
 	}
 	public static void showQuestNine(){
-		Date date = new Date();		//这个东东是获取现在的时间
-		String strDate = date.toString();	// print strDate is Tue Jun 18 19:07:36 CST 2024
+		Date date = new Date();		//这个东东是获取现在的时间 print strDate is Tue Jun 18 19:07:36 CST 2024
 		int nowTime = Integer.parseInt(date.toString().split(" ")[5]);
 		System.out.println("年龄大于28岁的并且未被删除的讲师");
 		System.out.println("工号\t\t\t姓名\t资历\t生日\t\t地址\t工资");
