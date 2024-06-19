@@ -252,7 +252,7 @@ public class TeacherManger {
 	public static void showQuestTen(){
 		Teacher[] temp = new Teacher[0];
 		for (Teacher t:teachers){
-			if (t.getAddress().equals("成都")&&t.getSeniority() == "高级讲师") {
+			if (t.getAddress().equals("成都")&&t.getSeniority().equals("高级讲师")) {
 				temp = Arrays.copyOf(temp,temp.length+1);
 				temp[temp.length-1] = t;
 			}
