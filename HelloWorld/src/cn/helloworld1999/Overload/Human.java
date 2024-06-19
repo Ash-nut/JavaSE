@@ -6,6 +6,11 @@ public class Human{
     int age;
 
     public void eat(){
-        System.out.println("吃");
+        System.out.println(name + "吃");
+    }
+
+    @Override
+    public String toString() {
+        return "Human [name=" + name + ", gender=" + gender + ", age=" + age + "]";
     }
 }
