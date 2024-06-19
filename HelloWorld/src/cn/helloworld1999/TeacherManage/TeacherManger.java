@@ -219,13 +219,14 @@ public class TeacherManger {
 				teacherArray[teacherArray.length-1] = t;
 			}
 		}
-		for(int i=0;i<teacherArray.length;i++){
-			for(int j = 0;j<teacherArray.length-1-i;j++){
-				if (teacherArray[i].getSal()<teacherArray[i+1].getSal()) {
-					teacherArray[i] = teacherArray[i+1];
-				}
-			}
-		}
+		// for(int i=0;i<teacherArray.length;i++){
+		// 	for(int j = 0;j<teacherArray.length-1-i;j++){
+		// 		if (teacherArray[i].getSal()<teacherArray[i+1].getSal()) {
+		// 			teacherArray[i] = teacherArray[i+1];
+		// 		}
+		// 	}
+		// }
+		Arrays.sort(teacherArray);
 		System.out.println("所有姓'杜'的讲师按照工资高低进行排序：");
 		System.out.println("工号\t\t\t姓名\t资历\t生日\t\t地址\t工资");
 		for(Teacher t : teacherArray) {

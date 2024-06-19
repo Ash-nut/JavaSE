@@ -2,7 +2,7 @@ package cn.helloworld1999.TeacherManage;
 /**
  * 讲师类
  */
-public class Teacher {
+public class Teacher implements Comparable<Teacher>  {
 	
 	/**工号*/
 	private String tid;
@@ -83,5 +83,10 @@ public class Teacher {
 				", sal=" + sal +
 				", isDel=" + isDel +
 				'}';
+	}
+	@Override
+	public int compareTo(Teacher o) {
+		// TODO Auto-generated method stub
+		return o.getSal() - this.getSal();
 	}
 }
