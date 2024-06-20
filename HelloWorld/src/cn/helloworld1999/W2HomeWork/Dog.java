@@ -6,7 +6,6 @@ package cn.helloworld1999.W2HomeWork;
 public class Dog {
 
     public Dog(){
-
     }
     public String bark(String str){
         System.out.println(str);

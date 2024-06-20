@@ -1,8 +1,8 @@
 package cn.helloworld1999.W2HomeWork1;
 
 public class Vehcles {
-    private String brand;
-    private String color;
+    public String brand;
+    public String color;
     public Vehcles(String brand, String color) {
         this.brand = brand;
         this.color = color;
