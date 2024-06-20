@@ -11,8 +11,7 @@ import java.util.Scanner;
 public class UserManagement {
     static public String[] customers = {"2023122214-杜琦彦-男-8888-12/22","2023122215-范建-男-10000-12/21","2023122216-范桃花-女-12000-12/20","2023122217-范醉-男-11500-12/20"};
     static public List<User> userList = new ArrayList<>();
-    static private Scanner sc = new Scanner(System.in);
-
+    static public Scanner sc = new Scanner(System.in);
     static public void initUserList(){
         for(String str:customers){
             userList.add(new User(str.split("-")[0], str.split("-")[1], str.split("-")[2],Double.parseDouble(str.split("-")[3]), str.split("-")[4]));
@@ -46,6 +45,7 @@ public class UserManagement {
             System.out.println("非法输入");
                 break;
         }
+        sc.close();
     }
 
     static public void showUserInformaction(){
