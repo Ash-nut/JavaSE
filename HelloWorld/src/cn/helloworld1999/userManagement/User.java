@@ -9,7 +9,7 @@ public class User {
     private String userGender;
     private double userBalance;
     private String userBirthday;
-    
+
     public User(){
         
     }
