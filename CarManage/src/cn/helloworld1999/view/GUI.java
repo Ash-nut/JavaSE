@@ -86,7 +86,7 @@ public class GUI {
                 }
                 break;
             case "9":
-                System.out.println("输入准备删除的车辆唯一ID号：");
+                System.out.println("输入准备删除的车辆唯一ID号:");
                 String str4 = sc.next();
                 if (CarDao.findInputCarID(str4) != -1) {
                     CarDao.deleteCarWithCarReallyId(str4);
