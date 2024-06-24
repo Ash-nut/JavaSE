@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="CarManage" />
         <module name="PhoneManage" />
+        <module name="MyArrayList" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
