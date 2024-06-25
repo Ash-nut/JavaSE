@@ -2,7 +2,10 @@ package cn.helloworld1999.TeacherManage;
 
 import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 
 /**
  * 讲师管理
@@ -62,7 +65,8 @@ public class TeacherManger {
 				showQuestTen();
 				break;
 			case 11 :
-				showQuestEleven();
+				//showQuestEleven();
+				map(TeacherManger.teachers);
 				break;
 			default:
 				System.out.println("输入有误，请重新输入....");
@@ -296,6 +300,32 @@ public class TeacherManger {
 			}
 		}
 	}
+	public static void map(Teacher[] arr){
+		Map<String,Integer> map = new HashMap<>();
+		for(Teacher t:arr){
+			boolean flag = false;
+			 Set<Map.Entry<String,Integer>>set = map.entrySet();
+			 for(Map.Entry<String,Integer> e:set){
+				if (e.getKey().equals(t.getAddress())) {
+					e.setValue(e.getValue()+1);
+					flag = true;
+					break;
+				}
+			 }
+			 if (!flag) {
+				map.put(t.getAddress(), 1);
+			 }
+		}
+		System.out.println(map.toString());
+		Set<String> set = map.keySet();
+		for(String str:set){
+			for(Teacher t:arr){
+				if (t.getAddress().equals(str)) {
+					System.out.println(t.toString());
+				}
+			}
+		}
+	}
 	/**静态块*/
 	static {
 		//初始化数据
@@ -311,5 +341,4 @@ public class TeacherManger {
 		Teacher[] arr = {t1,t2,t3,t4,t5,t6,t7,t8};
 		teachers = arr;
 	}
-
 }

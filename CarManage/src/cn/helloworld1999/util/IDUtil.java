@@ -1,4 +1,4 @@
-package cn.helloworld1999.util;
+
 
 import java.util.Date;
 import java.util.UUID;
@@ -7,7 +7,13 @@ import java.util.UUID;
  * IDUtil
  */
 public class IDUtil {
-    public static String getUUID() {
-        return UUID.randomUUID().toString().replace("-", "").toUpperCase();
+
+    public void getUUID(){
+        String id = new UUID(0, 0).toString();
+    }
+
+    static public long getLongId(){
+        long id = new Date().getTime();
+        return id;
     }
 }

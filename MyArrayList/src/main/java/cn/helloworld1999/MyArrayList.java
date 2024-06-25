@@ -21,7 +21,6 @@ public class MyArrayList {
         if (size <= 0 || index >= size || index < 0) {
             throw new RuntimeException("没东西可删");
         }
-        Object ele = eleArray[index];
         System.arraycopy(eleArray, index + 1, eleArray, index, size - index - 1);
         eleArray[--size] = null;
     }
