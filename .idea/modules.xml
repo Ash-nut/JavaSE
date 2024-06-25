@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/CarManage/CarManage.iml" filepath="$PROJECT_DIR$/CarManage/CarManage.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaSE.iml" filepath="$PROJECT_DIR$/.idea/JavaSE.iml" />
       <module fileurl="file://$PROJECT_DIR$/PhoneManage/PhoneManage.iml" filepath="$PROJECT_DIR$/PhoneManage/PhoneManage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day11/day11.iml" filepath="$PROJECT_DIR$/day11/day11.iml" />
     </modules>
   </component>
 </project>

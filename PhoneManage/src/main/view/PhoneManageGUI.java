@@ -6,6 +6,8 @@ import main.dao.PhoneDao;
 import java.util.List;
 import java.util.Scanner;
 
+import static main.dao.newPhoneDao.showMaxThreePhone;
+
 public class PhoneManageGUI {
     public static void Gui() {
         String id;
@@ -68,7 +70,8 @@ public class PhoneManageGUI {
                 break;
             case 5:
                 System.out.println("售价前三的商品信息：");
-                System.out.println(PhoneDao.showAllphoneWithPrice());
+                showMaxThreePhone();
+                //System.out.println(PhoneDao.showAllphoneWithPrice());
                 break;
                 case 6:
                     System.out.println(PhoneDao.showSix());
