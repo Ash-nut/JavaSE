@@ -9,6 +9,7 @@
         <module name="CarManage" />
         <module name="PhoneManage" />
         <module name="MyArrayList" />
+        <module name="doctorManage" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
