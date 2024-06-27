@@ -9,6 +9,11 @@
         <option value="$PROJECT_DIR$/PhoneManage/pom.xml" />
         <option value="$PROJECT_DIR$/MyArrayList/pom.xml" />
         <option value="$PROJECT_DIR$/doctorManage/pom.xml" />
+        <option value="$PROJECT_DIR$/runitmeExcptionTest/pom.xml" />
+        <option value="$PROJECT_DIR$/ioStream/pom.xml" />
+        <option value="$PROJECT_DIR$/ioStream2/pom.xml" />
+        <option value="$PROJECT_DIR$/IoStreamFile/pom.xml" />
+        <option value="$PROJECT_DIR$/bookManage/pom.xml" />
       </list>
     </option>
   </component>

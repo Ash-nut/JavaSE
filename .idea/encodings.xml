@@ -5,11 +5,21 @@
     <file url="file://$PROJECT_DIR$/CarManage/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/CarManageSystem/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/CarManageSystem/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IoStreamFile/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IoStreamFile/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MyArrayList/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MyArrayList/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/PhoneManage/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/PhoneManage/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bookManage/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bookManage/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/doctorManage/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/doctorManage/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ioStream/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ioStream/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ioStream2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ioStream2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/runitmeExcptionTest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/runitmeExcptionTest/src/main/resources" charset="UTF-8" />
   </component>
 </project>
