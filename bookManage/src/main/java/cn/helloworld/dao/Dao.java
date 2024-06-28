@@ -10,8 +10,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-//@TODO 利用多线程，实现可选的 自动提交
-
 public class Dao {
     /**
      * 检索是否 ID 重复

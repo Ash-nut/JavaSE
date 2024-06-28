@@ -16,6 +16,7 @@
         <module name="doctorManage" />
         <module name="javaDesign" />
         <module name="ioStream2" />
+        <module name="ProxyFactoryTest" />
         <module name="ioStream" />
       </profile>
     </annotationProcessing>
