@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="reflect" />
         <module name="PhoneManage" />
         <module name="IoStreamFile" />
         <module name="runitmeExcptionTest" />
@@ -13,6 +14,7 @@
         <module name="CarManage" />
         <module name="MyArrayList" />
         <module name="doctorManage" />
+        <module name="javaDesign" />
         <module name="ioStream2" />
         <module name="ioStream" />
       </profile>

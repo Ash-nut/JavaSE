@@ -121,7 +121,7 @@ public class Dao {
         List<Book> wc = Database.getBookList().stream().filter(b -> b.getAuthorName().equals("我吃番茄")).toList();
         List<Book> wcBooks= new ArrayList<>(wc);
         Book temp;
-        for (int i = 0; i < wcBooks.size()-1; i++) {
+        for (int i = 0; i < wcBooks.size(); i++) {
             for (int j = 0; j < wcBooks.size()-1 - i; j++) {
                 temp = wcBooks.get(j);
                 if (wcBooks.get(j).getReader() < wcBooks.get(j + 1).getReader()) {

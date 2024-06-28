@@ -15,6 +15,7 @@ public class Database {
     public static List<Book> getBookList() {
         return bookList;
     }
+    private Database(){}
 
     public static void setBookList(List<Book> bookList) {
         Database.bookList = bookList;
